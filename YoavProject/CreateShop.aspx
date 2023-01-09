@@ -2,18 +2,19 @@
 
 <!DOCTYPE html>
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
 </head>
-<body>
+        <script src="JavaScript.js"></script>
 
+<body>
     <div id="startShop" style="visibility: visible;">
         <form id="form1" runat="server">
-            <asp:Button onclick="btnSave_Click1" Text="text" runat="server" />
             <div>
                 <label>Shop Password:</label>
-                <asp:TextBox ID="ShopPassword" runat="server" />
+                <asp:TextBox ID="ShopPassword" runat="server" OnTextChanged="ShopPassword_TextChanged" />
             </div>
 
             <div>
@@ -24,18 +25,20 @@
                     <asp:ListItem Value="Other">Other</asp:ListItem>
                 </asp:DropDownList>
             </div>
+
             <div>
                 <label>Particial:</label>
                 <asp:CheckBox ID="Particial" runat="server" />
             </div>
            
+            <button onclick="ShowItems" ></button>
+         
+
             <div>
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
             </div>
         </form>
     </div>
-
     <link href="StyleSheet1.css" rel="stylesheet" />
-    <%--<link href="Price_Calculator.css" rel="stylesheet" />--%>
 </body>
 </html>

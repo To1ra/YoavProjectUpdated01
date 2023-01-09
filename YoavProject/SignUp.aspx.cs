@@ -34,7 +34,6 @@ namespace YoavProject
                 OleDbCommand cmd1 = new OleDbCommand(sqlstring, Con1);
                 int y = 0;
                 y = cmd1.ExecuteNonQuery();
-                Response.Write(y);
                 Con1.Close();
             }
 

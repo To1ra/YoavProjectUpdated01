@@ -16,6 +16,11 @@ td {
     margin: auto;
 }
 
-.ori {
+table {
     visibility: hidden;
 }
+/*
+#orichecker{
+    visibility:hidden;
+}
+*/
