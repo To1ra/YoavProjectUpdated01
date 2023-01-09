@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoavProject", "YoavProject\YoavProject.csproj", "{6B0D7D97-DC43-4ABD-B28A-88558AA107F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B0D7D97-DC43-4ABD-B28A-88558AA107F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0D7D97-DC43-4ABD-B28A-88558AA107F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0D7D97-DC43-4ABD-B28A-88558AA107F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0D7D97-DC43-4ABD-B28A-88558AA107F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {857DC117-506A-468B-871A-264953B53E26}
+	EndGlobalSection
+EndGlobal
