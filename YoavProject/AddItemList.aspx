@@ -2,7 +2,6 @@
 
 
 <!DOCTYPE html
-    <%-->This page is a create a shop page where you`ll be able to create your shop ...--%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>

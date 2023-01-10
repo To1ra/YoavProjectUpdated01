@@ -24,46 +24,47 @@ namespace YoavProject
                 OleDbCommand cmd = new OleDbCommand(sqlstring1, Con);
                 OleDbDataReader Dr = cmd.ExecuteReader();
                 Dr.Read();
-                Response.Write("<div id='orichecker'");
+                string output = "";
+                output += "<div id='orichecker'";
                 if (Dr.HasRows)
                 {
-                    Response.Write("Categories:");
-                    Response.Write("<ul>");
+                    output += "Categories:";
+                    output += "<ul>";
                     do
                     {
                         if (Equals(Dr["MyCategory"], last_fn) == false)
                         {
-                            Response.Write("</table>");
-                             Response.Write("<li > <button class='show-button' onclick='Show("+ i + ")' > " + Dr["MyCategory"].ToString() + " </button> </li>");
-                            Response.Write("<hr/>");
-                            Response.Write("<table id='ori" + i + "'>");
-                            Response.Write("<tr>");
-                            Response.Write("<td>  Name </td>");
-                            Response.Write("<td>  Level </td>");
-                            Response.Write("<td>  Price </td>");
-                            Response.Write("<td>  Quantity </td>");
-                            Response.Write("<tr/>");
+                            output += "</table>";
+                            output += "<li > <button class='show-button' onclick='Show(" + i + ")' > " + Dr["MyCategory"].ToString() + " </button> </li>";
+                            output += "<hr/>";
+                            output += "<table id='ori"+ i + "' style='visibility:hidden;'>";
+                            output += "<tr>";
+                            output += "<td>  Name </td>";
+                            output += "<td>  Level </td>";
+                            output += "<td>  Price </td>";
+                            output += "<td>  Quantity </td>";
+                            output += "<tr/>";
                             last_fn = Dr["MyCategory"].ToString();
                             i++;
                         }
-
-
                         else
                         {
-                            Response.Write("<tr>");
-                            Response.Write("<td>" + Dr["ItemName"].ToString() + "<img class=\"ImageOri\" src=\"...\\HD_Foods \\" + Dr["ItemName"].ToString() + ".png\"><td/>");
-                            Response.Write("<td>" + Dr["Food_Level"].ToString() + "<td/>");
-                            Response.Write("<td>" + Dr["Price"].ToString() + "<td/>");
-                            Response.Write("<td>" + "asp:TextBox runat='server'  ID = 'Quantity" + i + "'type='number' />  <td/> ");
-                            Response.Write("<tr/>");
+                            output += "<tr>";
+                            output += "<td>" + Dr["ItemName"].ToString() + "<img class='ImageOri' src='HD_Foods\\"+ Dr["ItemName"].ToString()+".png'><td/>";
+                            output += "<td>" + Dr["Food_Level"].ToString() + "<td/>";
+                            output += "<td>" + Dr["Price"].ToString() + "<td/>";
+                            output += "<td>" + "asp:TextBox runat='server'  ID = 'Quantity" + i + "'type='number' />  <td/> ";
+                            output += "<tr/>";
                         }
                     }
                     while (Dr.Read());
-
-                    Con.Close();
+                    output += "</ul>";
+                    output += "</div>";
                 }
-                Response.Write("<div/>");
+               // asb.Text = output;
+                Con.Close();
             }
+
 
             catch (Exception ex)
             {
@@ -91,7 +92,7 @@ namespace YoavProject
                     DateTime currentTime = DateTime.Now;
                     TimeZoneInfo timeZone = TimeZoneInfo.Local;
                     string time = "" + currentTime + timeZone.DisplayName + "";
-                    string sqlstring = " INSERT INTO Shops (ShopID,ShopPassword,TimeCreated, Name_IG, FarmID, FarmLevel, TransferOption, Particial) VALUES " + "('" + id + "','" + ShopPassword.Text + "','" + time +  "','" + Name_IG.Text + "','" + b + "','" + a + "','" + TransferOpt.Text + "','" + Particial.Checked + "');";
+                    string sqlstring = "INSERT INTO Shops (ShopID,ShopPassword,TimeCreated, Name_IG, FarmID, FarmLevel, TransferOption, Particial) VALUES " + "('" + id + "','" + ShopPassword.Text + "','" + time + "','" + "Toira" + "','" + b + "','" + a + "','" + TransferOpt.Text + "','" + Particial.Checked + "');";
                     OleDbCommand cmd1 = new OleDbCommand(sqlstring, Con1);
                     int y = 0;
                     y = cmd1.ExecuteNonQuery();
@@ -122,12 +123,9 @@ namespace YoavProject
         }
 
     }
-    }
-
-
-
-
-
-
-
 }
+
+
+
+
+

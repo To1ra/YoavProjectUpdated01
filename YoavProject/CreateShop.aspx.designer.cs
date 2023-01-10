@@ -51,6 +51,15 @@ namespace YoavProject
         protected global::System.Web.UI.WebControls.CheckBox Particial;
 
         /// <summary>
+        /// asb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal asb;
+
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

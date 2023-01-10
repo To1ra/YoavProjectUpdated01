@@ -10,16 +10,15 @@
         <script src="JavaScript.js"></script>
 
 <body>
-    <div id="startShop" style="visibility: visible;">
         <form id="form1" runat="server">
             <div>
                 <label>Shop Password:</label>
-                <asp:TextBox ID="ShopPassword" runat="server" OnTextChanged="ShopPassword_TextChanged" />
+                <asp:TextBox ID="ShopPassword" runat="server"/>
             </div>
 
             <div>
                 <label>TransferOpt:</label>
-                <asp:DropDownList ID="TransferOpt" runat="server">
+                <asp:DropDownList ID="TransferOpt" runat="server" >
                     <asp:ListItem Value="Blankets">Blankets</asp:ListItem>
                     <asp:ListItem Value="Rings">Rings</asp:ListItem>
                     <asp:ListItem Value="Other">Other</asp:ListItem>
@@ -31,14 +30,14 @@
                 <asp:CheckBox ID="Particial" runat="server" />
             </div>
            
-            <button onclick="ShowItems" ></button>
-         
+<%--         ..<asp:Literal ID="asb" runat="server"></asp:Literal>--%>
+
+
 
             <div>
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
             </div>
         </form>
-    </div>
     <link href="StyleSheet1.css" rel="stylesheet" />
 </body>
 </html>
